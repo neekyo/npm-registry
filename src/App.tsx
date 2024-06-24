@@ -3,7 +3,8 @@ import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/search/SearchPage";
 import { searchLoader } from './pages/search/searchLoader';
-import DetailsPage from "./pages/DetailsPage";
+import DetailsPage from "./pages/details/DetailsPage";
+import { detailsLoader } from "./pages/details/detailsLoader";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,10 @@ const router = createBrowserRouter([
         loader: searchLoader,
       },
       {
+        // wildcard route *
         path: "/packages/:name",
         element: <DetailsPage />,
+        loader: detailsLoader,
       },
     ],
   },

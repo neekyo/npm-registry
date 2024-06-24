@@ -9,7 +9,7 @@ export default function SearchInput() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    navigate(`/search?q=${term}`);
+    navigate(`/search?term=${term}`);
   };
 
   return (
